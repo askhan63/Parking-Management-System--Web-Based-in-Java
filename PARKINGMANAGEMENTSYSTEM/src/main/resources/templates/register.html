@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeLeaf.com">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/registerStyle.css">
+    <title>Register</title>
+  </head>
+  <body style="background-color:rgb(0, 255, 255)">
+
+  <div class="container" >
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+				<div class="card">
+					<div class="card-body">
+    <div class="container py-5 h-100">
+      <h3 style="color: red; text-align: center;"  >Register Yourself!</h3>
+  <form th:action="@{/userlogin}" method="post">
+
+					<div class="form-group">
+								<label>Enter First Name</label> <input type="text"
+									class="form-control" name="userFirstName">
+							</div>
+							<div class="form-group">
+								<label>Enter Last Name</label> <input type="text"
+									class="form-control" name="userLastName">
+							</div>
+				<div class="form-group">
+								<label>Gender</label> <input type="text"
+									class="form-control" name="userGender">
+							</div>
+							<div class="form-group">
+								<label>Enter Address</label> <input type="text"
+									class="form-control" name="userAddress">
+							</div>
+
+							<div class="form-group">
+								<label>Enter Email</label> <input type="email"
+									class="form-control" name="userEmail">
+							</div>
+
+
+							<div class="form-group">
+								<label>Enter Phone No</label> <input type="text"
+									class="form-control" name="phoneNumber">
+							</div>
+
+
+							<div class="form-group">
+								<label>No of Vehicles</label> <input type="number"
+									class="form-control" name="noOfVehicles">
+							</div>
+					<div class="form-group">
+								<label>Postal code</label> <input type="number"
+									class="form-control" name="userPostalCode">
+							</div>
+							<div class="form-group">
+								<label>City</label> <input type="text"
+									class="form-control" name="userCity">
+							</div>
+							<div class="form-group">
+								<label>Username</label> <input type="text"
+									class="form-control" name="userName">
+							</div>
+							<div class="form-group">
+								<label>password</label> <input type="text"
+									class="form-control" name="userPassword">
+							</div>
+							<button class="btn btn-primary btn-block">Submit</button>
+							
+						</form>
+						
+						</div>
+						<h5>Already Have an Account? </h5>
+						<button  class="btn btn-primary btn-block"  onclick="window.location.href='/userlogin'">Signin</button>
+					</div>
+					
+				</div>
+				
+			</div>
+		</div>
+  </div>
+  
+  <!--
+    <section th:action="@{/adminPage}" method="post" class="h-100 h-custom gradient-custom-2">
+   
+  <div class="container py-5 h-100">
+     <h3 style="color: red; text-align: center;"  >Register Yourself!</h3>
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12">
+        <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+          <div class="card-body p-0">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="p-5">
+                  <h3 class="fw-normal mb-5" style="color: #4835d4;">General Infomation</h3>
+
+   <!--               <div class="mb-4 pb-2">
+                    <select class="select">
+                      <option value="1">Title</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                      <option value="4">Four</option>
+                    </select>
+                  </div>
+                  
+
+                  <div class="row">
+                    <div class="col-md-6 mb-4 pb-2">
+
+                      <div class="form-outline" class="form-control">
+                        <input type="text"  class="form-control" name="userFirstName"  />
+                        <label class="form-label" for="form3Examplev2">First name</label>
+                      </div>
+
+                    </div>
+                    <div class="col-md-6 mb-4 pb-2">
+
+                      <div class="form-outline">
+                     <input type="text"  class="form-control" name="userLastName"  />
+                        <label class="form-label" for="form3Examplev3">Last name</label>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="mb-4 pb-2">
+                    <select class="select">
+                      <option value="1">Gender</option>
+                      <option value="2">Male</option>
+                      <option value="3">Female</option>
+                      <option value="4">Other</option>
+                    </select>
+                  </div>
+
+                  <div class="mb-4 pb-2">
+                    <div class="form-outline">
+                       <input type="text"  class="form-control" name="userAddress"  />
+                      <label class="form-label" for="form3Examplev4">Address</label>
+                    </div>
+                  </div>
+                  <div class="mb-4 pb-2">
+                    <div class="form-outline">
+                      <input type="text"  class="form-control" name="phoneNumber"  />
+                      <label class="form-label" for="form3Examplev4">Phone Number</label>
+                    </div>
+                  </div>
+					<div class="mb-4 pb-2">
+                    <div class="form-outline">
+                      <input type="text"  class="form-control" name="userEmail"  />
+                      <label class="form-label" for="form3Examplev4">Email Address</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+
+                      <div class="form-outline">
+                         <input type="number"  class="form-control" name="noOfVehicles"  />
+                        <label class="form-label" for="form3Examplev5">Number of Vehicles</label>
+                      </div>
+
+                    </div>
+                
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-lg-6 bg-indigo text-white">
+                <div class="p-5">
+                  <h3 class="fw-normal mb-5">Address Details</h3>
+
+         
+
+                  <div class="row">
+                    <div class="col-md-5 mb-4 pb-2">
+
+                      <div class="form-outline form-white">
+                        <input type="text"  class="form-control" name="userPostalCode"  />
+                        <label class="form-label" for="form3Examplea4">Postal Code</label>
+                      </div>
+
+                    </div>
+                    <div class="col-md-7 mb-4 pb-2">
+
+                      <div class="form-outline form-white">
+                        <input type="text"  class="form-control" name="userCity"  />
+                        <label class="form-label" for="form3Examplea5">City</label>
+                      </div>
+
+                    </div>
+                  </div>
+
+               
+
+ 				<h3 class="fw-normal mb-5">Login Details</h3>
+                  <div class="row">
+                                   
+                    <div class="col-md-7 mb-4 pb-2">
+
+                      <div class="form-outline form-white">
+                         <input type="text"  class="form-control" name="userName"  />
+                        <label class="form-label" for="form3Examplea7">username</label>
+                      </div>
+ </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-7 mb-4 pb-2">
+
+                      <div class="form-outline form-white">
+                        <input type="text"  class="form-control" name="userPassword"  />
+                        <label class="form-label" for="form3Examplea8">password</label>
+                      </div>
+
+  <div class="form-outline form-white">
+                        <input type="text"  class="form-control" name="userPassword"  />
+                        <label class="form-label" for="form3Examplea8">re-enter password</label>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <button  onclick="window.location.href='/userlogin'" type="button" class="btn btn-light btn-lg"
+                    data-mdb-ripple-color="dark">Register</button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
